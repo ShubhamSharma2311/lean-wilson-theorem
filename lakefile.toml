@@ -1,0 +1,15 @@
+name = "Wilson"
+version = "0.1.0"
+defaultTargets = ["Wilson"]
+
+[leanOptions]
+pp.unicode.fun = true
+autoImplicit = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "9944fe2973b8dc0b86949101ed98232c07cd54a0"
+
+[[lean_lib]]
+name = "Wilson"
