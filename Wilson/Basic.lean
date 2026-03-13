@@ -12,4 +12,8 @@ namespace Wilson
 
 open Nat
 
+/-- **Wilson's theorem** in `ZMod p`. -/
+theorem wilson {p : ℕ} (hp : p.Prime) : ((p - 1)! : ZMod p) = -1 := by
+  sorry
+
 end Wilson
