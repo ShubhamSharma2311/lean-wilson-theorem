@@ -14,6 +14,7 @@ open Nat
 
 /-- **Wilson's theorem** in `ZMod p`. -/
 theorem wilson {p : ℕ} (hp : p.Prime) : ((p - 1)! : ZMod p) = -1 := by
-  sorry
+  haveI := Fact.mk hp
+  exact ZMod.wilsons_lemma (p := p)
 
 end Wilson
