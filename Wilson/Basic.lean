@@ -19,6 +19,9 @@ theorem wilson {p : ℕ} (hp : p.Prime) : ((p - 1)! : ZMod p) = -1 := by
 
 /-- Divisibility form: `p ∣ (p - 1)! + 1`. -/
 theorem dvd_factorial_succ {p : ℕ} (hp : p.Prime) : p ∣ (p - 1)! + 1 := by
-  sorry
+  rw [← ZMod.natCast_eq_zero_iff]
+  push_cast
+  rw [wilson hp]
+  ring
 
 end Wilson
