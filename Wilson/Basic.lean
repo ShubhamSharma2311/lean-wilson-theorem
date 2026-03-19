@@ -24,4 +24,8 @@ theorem dvd_factorial_succ {p : ℕ} (hp : p.Prime) : p ∣ (p - 1)! + 1 := by
   rw [wilson hp]
   ring
 
+/-- Converse: if `n ∣ (n - 1)! + 1` with `1 < n`, then `n` is prime. -/
+theorem prime_of_dvd_factorial_succ {n : ℕ} (hn : 1 < n) (h : n ∣ (n - 1)! + 1) : n.Prime := by
+  sorry
+
 end Wilson
