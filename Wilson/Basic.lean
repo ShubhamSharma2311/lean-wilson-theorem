@@ -34,4 +34,8 @@ theorem prime_of_dvd_factorial_succ {n : ℕ} (hn : 1 < n) (h : n ∣ (n - 1)! +
   have h3 : n.minFac ∣ 1 := (Nat.dvd_add_right h1).mp h2
   exact hm.one_lt.ne' (Nat.dvd_one.mp h3)
 
+/-- Wilson's criterion for primality. -/
+theorem prime_iff {n : ℕ} (hn : 1 < n) : n.Prime ↔ n ∣ (n - 1)! + 1 := by
+  sorry
+
 end Wilson
