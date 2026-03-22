@@ -35,7 +35,7 @@ theorem prime_of_dvd_factorial_succ {n : ℕ} (hn : 1 < n) (h : n ∣ (n - 1)! +
   exact hm.one_lt.ne' (Nat.dvd_one.mp h3)
 
 /-- Wilson's criterion for primality. -/
-theorem prime_iff {n : ℕ} (hn : 1 < n) : n.Prime ↔ n ∣ (n - 1)! + 1 := by
-  sorry
+theorem prime_iff {n : ℕ} (hn : 1 < n) : n.Prime ↔ n ∣ (n - 1)! + 1 :=
+  ⟨dvd_factorial_succ, prime_of_dvd_factorial_succ hn⟩
 
 end Wilson
